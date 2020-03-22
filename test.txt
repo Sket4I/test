@@ -1,1 +1,7 @@
-Hello world
+On the far left of the diagram are the utility methods readAllBytes,
+ readAllLines, and the write methods, designed for simple, common cases.
+ To the right of those are the methods used to iterate over a stream or lines of text, 
+such as newBufferedReader, newBufferedWriter, then newInputStream and newOutputStream. 
+These methods are interoperable with the java.io package. To the right of those are the 
+methods for dealing with ByteChannels, SeekableByteChannels, and ByteBuffers, such as the newByteChannel method. 
+Finally, on the far right are the methods that use FileChannel for advanced applications needing file locking or memory-mapped I/O.
