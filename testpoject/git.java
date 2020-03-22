@@ -3,13 +3,20 @@ package testpoject;
 import java.io.*;
 
 public class git {
-
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
+		try {
 			File file = new File("C:/Users/Slava/GitHub/test/test.txt");
-			FileReader fr = new FileReader(file);
-		      char [] a = new char[1000];
-		      fr.read(a);
-		         System.out.print(a);
-		      fr.close();
-		   }
+			FileReader fileReader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+			String line;
+			while((line = bufferedReader.readLine()) != null) {
+				System.out.println(line);
+			}
+
+			bufferedReader.close();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+	}
+}
